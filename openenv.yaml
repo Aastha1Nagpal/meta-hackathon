@@ -1,0 +1,29 @@
+name: support_inbox_triage
+version: 0.1.0
+description: >
+  A real-world customer support triage environment where an agent must prioritize,
+  route, tag, and respond to inbound tickets across billing, security, and incident workflows.
+entrypoint:
+  module: server.app
+  app: app
+environment:
+  class: support_triage_env.env.SupportInboxEnv
+benchmark_name: support_inbox_triage
+tasks:
+  - id: duplicate_refund
+    difficulty: easy
+    description: Resolve a duplicate billing charge request.
+  - id: phishing_escalation
+    difficulty: medium
+    description: Escalate a phishing and account security incident.
+  - id: enterprise_outage_credit
+    difficulty: hard
+    description: Handle a VIP outage plus SLA credit request.
+models:
+  observation: support_triage_env.models.SupportObservation
+  action: support_triage_env.models.SupportAction
+  reward: support_triage_env.models.SupportReward
+api:
+  reset: /reset
+  step: /step
+  state: /state
