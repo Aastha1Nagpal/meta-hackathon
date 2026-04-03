@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: Support Inbox Triage OpenEnv
 sdk: docker
@@ -361,6 +360,3 @@ This project currently uses the version declared in `pyproject.toml` and `openen
 - The OpenEnv hackathon brief for defining the environment requirements
 - Hugging Face and OpenEnv tooling for validation and deployment conventions
 - The customer support operations domain as the basis for a realistic agent benchmark
-=======
-# meta-hackathon
->>>>>>> 30d7f802248ad44623e1c8173728f18cbee53311
